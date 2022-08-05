@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
+
+// DARK THEME
+$darkBG: #121212
+$darkForMenu: #1e1e1e
+$darkForBorder: #373737
+$darkForHeader: #1D1D1D
+$darkForUpperHeader: #272727
+$darkForSearch: #2C2C2C
+
+// MAIN COLORS FOR DARK
+$blueForDark: #75DDFE
+$blueForBorder: #87C1D3
+$gradient: linear-gradient(91.87deg, #24CFFF 1.95%, #75DDFE 100.18%)
+$white: white
+$forText: rgb(255, 255, 255, 0.6)
+$forTextMenu: rgb(255, 255, 255, 0.55)
+$forNotification: rgb(255, 255, 255, 0.45)
+$darkerForText: rgb(255, 255, 255, 0.38)
+$darkerForDots: rgb(255, 255, 255, 0.35)
+
+// FOR SWITCH
+$mainSwitch: #9066FF
+$secondForSwitch: #D3BFFF
+$moon: #F7FF97
+
+$mainLightSwitch: #66B6FF
+$secondForLightSwitch: #FFEF62
+$lightBorder: #E3D23A
+
+// Styles
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background: $darkBG
+    height: 100vh
+    font-family: 'Roboto Condensed', sans-serif
+    overflow-x: hidden
+    scroll-behavior: hidden
+
+    #root
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        .container
+            width: 71.40625%
+            height: 100vh
+            display: flex
+            justify-content: center
+            align-items: flex-start
+            margin: auto
+
+            .chat-container
+                width: clamp(380px,39.583333333333336vw, 1520px)
+                height: clamp(488px,50.833333333333336vw, 1952px)
+                border: 2px solid $darkForBorder
+                display: flex
+                flex-direction: column
+                border-radius: 7px
+                margin-top: 64px
+                background-color: $darkForMenu
+
+                .upper-container
+                    width: 100%
+                    height: clamp(25px,2.6041666666666665vw,100px)
+                    color: $blueForDark
+                    display: flex
+                    border-bottom: 2px solid $darkForBorder
+                    align-items: center
+                    justify-content: space-between
+
+                    .chat-header
+                        font-family: 'Roboto Condensed'
+                        font-style: normal
+                        font-weight: 400
+                        font-size: clamp(11.5px,1.1979166666666667vw,46px)
+                        margin-left: 16px
+
+                    .additional-buttons
+                        color: rgb(135, 226, 253, 0.9)
+                        margin-right: 32px
+                        display: flex
+                        justify-content: space-between
+                        font-size: 20px
+                        width: 125px
+
+                    .userGroup-i, .trash-i, .robot-i
+                        transition: 0.3s all
+                        cursor: pointer
+                        &:hover
+                            color: #00c3ff
+
+                .messanger-box
+                    width: 100%
+                    height: 64px
+                    display: flex
+                    align-items: center
+                    border-bottom: 2px solid $darkForBorder
+                    transition: 0.2s all
+                    &:hover
+                        background-color: #292929
+
+                    .user-png
+                        margin-left: 16px
+                        user-select: none
+
+                    .user-message-content
+
+                    .user-message
+                        color: $white
+                        display: flex
+                        align-items: center
+                        height: 100%
+                        margin-left: 16px
+
+                        .user-name
+                            font-family: 'Roboto Condensed'
+                            font-style: normal
+                            font-weight: 500
+                            font-size: clamp(9px,0.9375vw,36px)
+                            color: #FFFFFF
+
+                        .message
+                            font-family: 'Roboto Condensed'
+                            font-style: normal
+                            font-weight: 400
+                            font-size: clamp(8px,0.8333333333333334vw,32px)
+                            margin-top: 11px
+                            color: $darkerForText
+
+                        .user-name-and-task
+                            display: flex
+                            align-items: center
+                            border: 2px yellow
+
+                        .separator
+                            width: 1px
+                            height: 16px
+                            margin-right: 16px
+                            margin-left: 16px
+                            background-color: white
+
+                        .task
+                            color: $blueForDark
+
+        .header
+            width: 1920px
+            margin-top: 140px
+            height: clamp(74.5px,7.760416666666667vw,298px)
+            background-color: #1D1D1D
+
+            .upper-header
+                width: 74.63541666666667%
+                height: clamp(54.5px,5.677083333333333vw,218px)
+                margin: auto
+                margin-top: clamp(7.5px,0.78125vw,30px)
+                margin-bottom: clamp(7.5px,0.78125vw,30px)
+                background-color: $darkForUpperHeader
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+            .search-bar
+                position: relative
+                width: clamp(255px,26.5625vw,1020px)
+                height: 36px
+                border: 2px solid #373737
+                border-radius: 4px
+                background-color: $darkForSearch
+                color: white
+                font-family: 'Roboto Condensed'
+                font-style: normal
+                font-weight: 400
+                padding-left: 40px
+                font-size: clamp(10px,1.0416666666666667vw,40px)
+                &:focus
+                    border: 2px solid #5a5a5a
+                    outline: none
+
+            .search-bar-after
+                position: relative
+                width: clamp(255px,26.5625vw,1020px)
+                height: 36px
+                border: 2px solid #373737
+                border-radius: 4px
+                background-color: $darkForSearch
+                color: white
+                font-family: 'Roboto Condensed'
+                font-style: normal
+                font-weight: 400
+                padding-left: 10px
+                font-size: clamp(10px,1.0416666666666667vw,40px)
+                &:focus
+                    border: 2px solid #5a5a5a
+                    outline: none
+
+            .logo
+                margin-left: 32px
+
+            .search-bar::placeholder
+                display: flex
+                align-items: center
+                font-family: 'Roboto Condensed'
+                font-style: normal
+                font-weight: 400
+                font-size: clamp(10px,1.0416666666666667vw,40px)
+
+            input[type="search"]::-webkit-search-cancel-button
+                -webkit-appearance: none
+
+            .icon-2
+                position: absolute
+                top: 57px
+                left: 672px
+                width: 26px
+                height: 26px
+                z-index: 10
+                color: white
+
+            .icon-2-invisible
+                display: none
+
+            .user, .settings
+                display: flex
+                align-items: center
+                font-size: 22px
+                cursor: pointer
+                color: $blueForDark
+
+            .user-photo
+                width: 28px
+                height: 28px
+                border: 1px solid $blueForDark
+                border-radius: 100%
+                margin-right: 8px
+
+            .settings
+                margin-right: 32px
+                display: flex
+                justify-content: center
+                border-radius: 4px
+                width: 120px
+                height: 40px
+                transition: 0.3s all
+                &:hover
+                    background-color: #333333
+
+            .user
+                width: 140px
+                display: flex
+                justify-content: center
+                height: 40px
+                border-radius: 4px
+                transition: 0.3s all
+                &:hover
+                    background-color: #333333
+
+            .settings-text, .user-text
+                transition: 0.2s all
+                &:hover
+                    color: $white
+                    color: #18c9ff
+            .gear
+                font-size: 25px
+                margin-right: 8px
+
+.menu
+    width: clamp(121px,12.604166666666666vw,484px)
+    background-color: transparent
+    display: flex
+    margin-top: 64px
+    margin-right: 64px
+    flex-direction: column
+
+    .user-profile-tab
+        width: 100%
+        height: clamp(27.5px,2.8645833333333335vw, 110px)
+        display: flex
+        align-items: center
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 7px
+
+        .user-img
+            width: 32px
+            height: 32px
+            border: 1px solid #75DDFE
+            border-radius: 100%
+            margin-left: 16px
+
+        .username
+            font-family: 'Roboto Condensed'
+            font-style: normal
+            font-weight: 400
+            font-size: clamp(10px,1.0416666666666667vw,40px)
+            color: $blueForDark
+            margin-left: 8px
+
+        .separator-u
+            background-color: #fff
+            width: 1px
+            height: 17px
+            margin-left: 8px
+
+        .condition
+            font-family: 'Roboto Condensed'
+            font-style: normal
+            font-weight: 400
+            font-size: clamp(7.5px,0.78125vw,30px)
+            color: rgba(255, 255, 255, 0.6)
+            margin-left: 8px
+
+    .menu-tabs
+        display: flex
+        flex-direction: column
+
+        .your-bots, .friends, .stats, .mode-switch
+            width: 100%
+            height: 41.47px
+            background: #1E1E1E
+            border: 2px solid #373737
+            border-radius: 27px
+            display: flex
+            align-items: center
+            transition: 0.3s all
+            &:hover
+                border: 2px solid $blueForBorder
+                background: #2E2E2E
+
+        .your-bots
+            margin-top: 32px
+
+        .friends, .stats, .mode-switch, .create-bot
+            margin-top: 17px
+
+        .your-bots
+            display: flex
+            align-items: center
+            color: $blueForDark
+            font-size: clamp(10px,1.0416666666666667vw,40px)
+
+            .your-bots-p
+                color: $forTextMenu
+                margin-left: 16px
+
+            .brain-icon
+                margin-left: 16px
+
+            .notification-bubble
+                width: clamp(15px,1.5625vw,60px)
+                height: clamp(8.5px,0.8854166666666666vw,34px)
+                background-color: $forNotification
+                border-radius: 20px
+                margin-left: 57px
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: clamp(7.5px,0.78125vw,30px)
+                color: rgb(255, 255, 255, 0.7)
+
+        .friends
+            display: flex
+            align-items: center
+            color: $blueForDark
+            font-size: clamp(10px,1.0416666666666667vw,40px)
+
+            .your-friends-p
+                color: $forTextMenu
+                margin-left: 16px
+
+            .friends-icon
+                margin-left: 16px
+
+        .stats
+            display: flex
+            align-items: center
+            color: $blueForDark
+            font-size: clamp(10px,1.0416666666666667vw,40px)
+
+            .your-stats-p
+                color: $forTextMenu
+                margin-left: 16px
+
+            .stats-icon
+                margin-left: 17px
+
+        .switch-mode-p
+            font-family: 'Roboto Condensed'
+            font-style: normal
+            font-weight: 400
+            margin-left: 16px
+            font-size: clamp(10px,1.0416666666666667vw,40px)
+            color: rgba(255, 255, 255, 0.55)
+
+        input[type=checkbox]
+            height: 0
+            width: 0
+            visibility: hidden
+
+label
+    margin-left: 48px
+    cursor: pointer
+    text-indent: -9999px
+    width: 55px
+    height: 20.81px
+    background: $mainSwitch
+    display: block
+    border-radius: 100px
+    position: relative
+
+label:after
+    content: ''
+    position: absolute
+    top: 1.5px
+    left: 5px
+    width: 13.84px
+    height: 13.84px
+    background: $moon
+    border: 2px solid white
+    border-radius: 90px
+    transition: 0.3s
+
+input:checked + label
+    background: $mainLightSwitch
+
+input:checked + label:after
+    left: calc(100% - 5px)
+    background-color: $secondForLightSwitch
+    border: 2px solid $lightBorder
+    transform: translateX(-100%)
+
+label:active:after
+    width: 20px
+
+.create-bot
+    width: 100%
+    height: 41.47px
+    font-size: clamp(12px,1.25vw,48px)
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $gradient
+    border-radius: 22px
+    transition: 0.3s all
+    &:hover
+        color: $white
+
+.right
+    width: clamp(121px,12.604166666666666vw,484px)
+    margin-top: 64px
+    margin-left: 64px
+    z-index: 20px
+    height: 400px
+    display: flex
+    flex-direction: column

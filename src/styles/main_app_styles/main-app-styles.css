@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121212;
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: hidden;
+}
+body #root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body #root .container {
+  width: 71.40625%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+body #root .container .chat-container {
+  width: clamp(380px, 39.5833333333vw, 1520px);
+  height: clamp(488px, 50.8333333333vw, 1952px);
+  border: 2px solid #373737;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  margin-top: 64px;
+  background-color: #1e1e1e;
+}
+body #root .container .chat-container .upper-container {
+  width: 100%;
+  height: clamp(25px, 2.6041666667vw, 100px);
+  color: #75DDFE;
+  display: flex;
+  border-bottom: 2px solid #373737;
+  align-items: center;
+  justify-content: space-between;
+}
+body #root .container .chat-container .upper-container .chat-header {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(11.5px, 1.1979166667vw, 46px);
+  margin-left: 16px;
+}
+body #root .container .chat-container .upper-container .additional-buttons {
+  color: rgba(135, 226, 253, 0.9);
+  margin-right: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  width: 125px;
+}
+body #root .container .chat-container .upper-container .userGroup-i, body #root .container .chat-container .upper-container .trash-i, body #root .container .chat-container .upper-container .robot-i {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+body #root .container .chat-container .upper-container .userGroup-i:hover, body #root .container .chat-container .upper-container .trash-i:hover, body #root .container .chat-container .upper-container .robot-i:hover {
+  color: #00c3ff;
+}
+body #root .container .chat-container .messanger-box {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #373737;
+  transition: 0.2s all;
+}
+body #root .container .chat-container .messanger-box:hover {
+  background-color: #292929;
+}
+body #root .container .chat-container .messanger-box .user-png {
+  margin-left: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+body #root .container .chat-container .messanger-box .user-message {
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 16px;
+}
+body #root .container .chat-container .messanger-box .user-message .user-name {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(9px, 0.9375vw, 36px);
+  color: #FFFFFF;
+}
+body #root .container .chat-container .messanger-box .user-message .message {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(8px, 0.8333333333vw, 32px);
+  margin-top: 11px;
+  color: rgba(255, 255, 255, 0.38);
+}
+body #root .container .chat-container .messanger-box .user-message .user-name-and-task {
+  display: flex;
+  align-items: center;
+  border: 2px yellow;
+}
+body #root .container .chat-container .messanger-box .user-message .separator {
+  width: 1px;
+  height: 16px;
+  margin-right: 16px;
+  margin-left: 16px;
+  background-color: white;
+}
+body #root .container .chat-container .messanger-box .user-message .task {
+  color: #75DDFE;
+}
+body #root .header {
+  width: 1920px;
+  margin-top: 140px;
+  height: clamp(74.5px, 7.7604166667vw, 298px);
+  background-color: #1D1D1D;
+}
+body #root .header .upper-header {
+  width: 74.6354166667%;
+  height: clamp(54.5px, 5.6770833333vw, 218px);
+  margin: auto;
+  margin-top: clamp(7.5px, 0.78125vw, 30px);
+  margin-bottom: clamp(7.5px, 0.78125vw, 30px);
+  background-color: #272727;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #root .header .search-bar {
+  position: relative;
+  width: clamp(255px, 26.5625vw, 1020px);
+  height: 36px;
+  border: 2px solid #373737;
+  border-radius: 4px;
+  background-color: #2C2C2C;
+  color: white;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 40px;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+body #root .header .search-bar:focus {
+  border: 2px solid #5a5a5a;
+  outline: none;
+}
+body #root .header .search-bar-after {
+  position: relative;
+  width: clamp(255px, 26.5625vw, 1020px);
+  height: 36px;
+  border: 2px solid #373737;
+  border-radius: 4px;
+  background-color: #2C2C2C;
+  color: white;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 10px;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+body #root .header .search-bar-after:focus {
+  border: 2px solid #5a5a5a;
+  outline: none;
+}
+body #root .header .logo {
+  margin-left: 32px;
+}
+body #root .header .search-bar::-moz-placeholder {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+body #root .header .search-bar:-ms-input-placeholder {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+body #root .header .search-bar::placeholder {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+body #root .header input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+body #root .header .icon-2 {
+  position: absolute;
+  top: 57px;
+  left: 672px;
+  width: 26px;
+  height: 26px;
+  z-index: 10;
+  color: white;
+}
+body #root .header .icon-2-invisible {
+  display: none;
+}
+body #root .header .user, body #root .header .settings {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  color: #75DDFE;
+}
+body #root .header .user-photo {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #75DDFE;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+body #root .header .settings {
+  margin-right: 32px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  width: 120px;
+  height: 40px;
+  transition: 0.3s all;
+}
+body #root .header .settings:hover {
+  background-color: #333333;
+}
+body #root .header .user {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  border-radius: 4px;
+  transition: 0.3s all;
+}
+body #root .header .user:hover {
+  background-color: #333333;
+}
+body #root .header .settings-text, body #root .header .user-text {
+  transition: 0.2s all;
+}
+body #root .header .settings-text:hover, body #root .header .user-text:hover {
+  color: white;
+  color: #18c9ff;
+}
+body #root .header .gear {
+  font-size: 25px;
+  margin-right: 8px;
+}
+
+.menu {
+  width: clamp(121px, 12.6041666667vw, 484px);
+  background-color: transparent;
+  display: flex;
+  margin-top: 64px;
+  margin-right: 64px;
+  flex-direction: column;
+}
+.menu .user-profile-tab {
+  width: 100%;
+  height: clamp(27.5px, 2.8645833333vw, 110px);
+  display: flex;
+  align-items: center;
+  background: #1E1E1E;
+  border: 2px solid #373737;
+  border-radius: 7px;
+}
+.menu .user-profile-tab .user-img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #75DDFE;
+  border-radius: 100%;
+  margin-left: 16px;
+}
+.menu .user-profile-tab .username {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+  color: #75DDFE;
+  margin-left: 8px;
+}
+.menu .user-profile-tab .separator-u {
+  background-color: #fff;
+  width: 1px;
+  height: 17px;
+  margin-left: 8px;
+}
+.menu .user-profile-tab .condition {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(7.5px, 0.78125vw, 30px);
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 8px;
+}
+.menu .menu-tabs {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-tabs .your-bots, .menu .menu-tabs .friends, .menu .menu-tabs .stats, .menu .menu-tabs .mode-switch {
+  width: 100%;
+  height: 41.47px;
+  background: #1E1E1E;
+  border: 2px solid #373737;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s all;
+}
+.menu .menu-tabs .your-bots:hover, .menu .menu-tabs .friends:hover, .menu .menu-tabs .stats:hover, .menu .menu-tabs .mode-switch:hover {
+  border: 2px solid #87C1D3;
+  background: #2E2E2E;
+}
+.menu .menu-tabs .your-bots {
+  margin-top: 32px;
+}
+.menu .menu-tabs .friends, .menu .menu-tabs .stats, .menu .menu-tabs .mode-switch, .menu .menu-tabs .create-bot {
+  margin-top: 17px;
+}
+.menu .menu-tabs .your-bots {
+  display: flex;
+  align-items: center;
+  color: #75DDFE;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+.menu .menu-tabs .your-bots .your-bots-p {
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 16px;
+}
+.menu .menu-tabs .your-bots .brain-icon {
+  margin-left: 16px;
+}
+.menu .menu-tabs .your-bots .notification-bubble {
+  width: clamp(15px, 1.5625vw, 60px);
+  height: clamp(8.5px, 0.8854166667vw, 34px);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  margin-left: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(7.5px, 0.78125vw, 30px);
+  color: rgba(255, 255, 255, 0.7);
+}
+.menu .menu-tabs .friends {
+  display: flex;
+  align-items: center;
+  color: #75DDFE;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+.menu .menu-tabs .friends .your-friends-p {
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 16px;
+}
+.menu .menu-tabs .friends .friends-icon {
+  margin-left: 16px;
+}
+.menu .menu-tabs .stats {
+  display: flex;
+  align-items: center;
+  color: #75DDFE;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+}
+.menu .menu-tabs .stats .your-stats-p {
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 16px;
+}
+.menu .menu-tabs .stats .stats-icon {
+  margin-left: 17px;
+}
+.menu .menu-tabs .switch-mode-p {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 16px;
+  font-size: clamp(10px, 1.0416666667vw, 40px);
+  color: rgba(255, 255, 255, 0.55);
+}
+.menu .menu-tabs input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  margin-left: 48px;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 20.81px;
+  background: #9066FF;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 1.5px;
+  left: 5px;
+  width: 13.84px;
+  height: 13.84px;
+  background: #F7FF97;
+  border: 2px solid white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #66B6FF;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  background-color: #FFEF62;
+  border: 2px solid #E3D23A;
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 20px;
+}
+
+.create-bot {
+  width: 100%;
+  height: 41.47px;
+  font-size: clamp(12px, 1.25vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(91.87deg, #24CFFF 1.95%, #75DDFE 100.18%);
+  border-radius: 22px;
+  transition: 0.3s all;
+}
+.create-bot:hover {
+  color: white;
+}
+
+.right {
+  width: clamp(121px, 12.6041666667vw, 484px);
+  margin-top: 64px;
+  margin-left: 64px;
+  z-index: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=main-app-styles.css.map */
