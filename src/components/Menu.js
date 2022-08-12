@@ -46,9 +46,15 @@ const Menu = () => {
           ></FontAwesomeIcon>
           <p className="your-stats-p">Statistics</p>
         </div>
+        {/* Switch */}
         <div className="mode-switch">
           <p className="switch-mode-p">Mode Switch</p>
-          <input type="checkbox" id="switch" />
+          <input
+            type="checkbox"
+            id="switch"
+            // onChange={toggleTheme}
+            // checked={theme === "light"}
+          />
           <label for="switch">Toggle</label>
         </div>
         <div className="create-bot">CREATE AI</div>

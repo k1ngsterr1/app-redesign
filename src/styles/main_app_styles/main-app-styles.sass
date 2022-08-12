@@ -28,6 +28,18 @@ $mainLightSwitch: #66B6FF
 $secondForLightSwitch: #FFEF62
 $lightBorder: #E3D23A
 
+// LIGHT THEME
+$mainBlueLight: #00B9FF
+$lightBlueBorder: #24CFFF
+$notificationLight: #FF5324
+$lightBG: #E0F7FE
+$dotsLight: #D6E1E4
+$searchBar: #F2FCFF
+$upperLight: #F5FCFF
+$headerLight: white
+$borderLight: rgb(153, 153, 153, 0.2)
+$forLightText: #121212
+
 // Styles
 
 *
@@ -63,7 +75,7 @@ body
                 display: flex
                 flex-direction: column
                 border-radius: 7px
-                margin-top: 64px
+                margin-top: clamp(32px,3.3333333333333335vw,128px)
                 background-color: $darkForMenu
 
                 .upper-container
@@ -80,15 +92,15 @@ body
                         font-style: normal
                         font-weight: 400
                         font-size: clamp(11.5px,1.1979166666666667vw,46px)
-                        margin-left: 16px
+                        margin-left: clamp(8px,0.8333333333333334vw,32px)
 
                     .additional-buttons
                         color: rgb(135, 226, 253, 0.9)
-                        margin-right: 32px
+                        margin-right: clamp(16px,1.6666666666666667vw,64px)
                         display: flex
                         justify-content: space-between
                         font-size: 20px
-                        width: 125px
+                        width: clamp(62.5px,6.510416666666667vw,250px)
 
                     .userGroup-i, .trash-i, .robot-i
                         transition: 0.3s all
@@ -98,7 +110,7 @@ body
 
                 .messanger-box
                     width: 100%
-                    height: 64px
+                    height: clamp(32px,3.3333333333333335vw, 128px)
                     display: flex
                     align-items: center
                     border-bottom: 2px solid $darkForBorder
@@ -107,7 +119,7 @@ body
                         background-color: #292929
 
                     .user-png
-                        margin-left: 16px
+                        margin-left: clamp(8px,0.8333333333333334vw,32px)
                         user-select: none
 
                     .user-message-content
@@ -117,7 +129,7 @@ body
                         display: flex
                         align-items: center
                         height: 100%
-                        margin-left: 16px
+                        margin-left: clamp(8px,0.8333333333333334vw,32px)
 
                         .user-name
                             font-family: 'Roboto Condensed'
@@ -131,27 +143,26 @@ body
                             font-style: normal
                             font-weight: 400
                             font-size: clamp(8px,0.8333333333333334vw,32px)
-                            margin-top: 11px
+                            margin-top: clamp(5.5px,0.5729166666666666vw,22px)
                             color: $darkerForText
 
                         .user-name-and-task
                             display: flex
                             align-items: center
-                            border: 2px yellow
 
                         .separator
                             width: 1px
-                            height: 16px
-                            margin-right: 16px
-                            margin-left: 16px
+                            height: clamp(8px,0.8333333333333334vw,32px)
+                            margin-right: clamp(8px,0.8333333333333334vw,32px)
+                            margin-left: clamp(8px,0.8333333333333334vw,32px)
                             background-color: white
 
                         .task
                             color: $blueForDark
 
         .header
-            width: 1920px
-            margin-top: 140px
+            width: 100%
+            margin-top: clamp(70px,7.291666666666667vw,280px)
             height: clamp(74.5px,7.760416666666667vw,298px)
             background-color: #1D1D1D
 
@@ -169,7 +180,7 @@ body
             .search-bar
                 position: relative
                 width: clamp(255px,26.5625vw,1020px)
-                height: 36px
+                height: clamp(18px,1.875vw,72px)
                 border: 2px solid #373737
                 border-radius: 4px
                 background-color: $darkForSearch
@@ -177,7 +188,7 @@ body
                 font-family: 'Roboto Condensed'
                 font-style: normal
                 font-weight: 400
-                padding-left: 40px
+                padding-left: clamp(20px,2.0833333333333335vw,80px)
                 font-size: clamp(10px,1.0416666666666667vw,40px)
                 &:focus
                     border: 2px solid #5a5a5a
@@ -186,7 +197,7 @@ body
             .search-bar-after
                 position: relative
                 width: clamp(255px,26.5625vw,1020px)
-                height: 36px
+                height: clamp(18px,1.875vw,72px)
                 border: 2px solid #373737
                 border-radius: 4px
                 background-color: $darkForSearch
@@ -194,7 +205,7 @@ body
                 font-family: 'Roboto Condensed'
                 font-style: normal
                 font-weight: 400
-                padding-left: 10px
+                padding-left: clamp(5px,0.5208333333333334vw,20px)
                 font-size: clamp(10px,1.0416666666666667vw,40px)
                 &:focus
                     border: 2px solid #5a5a5a
@@ -217,11 +228,10 @@ body
             .icon-2
                 position: absolute
                 top: 57px
-                left: 672px
+                left: 666px
                 width: 26px
                 height: 26px
                 z-index: 10
-                color: white
 
             .icon-2-invisible
                 display: none
@@ -274,7 +284,7 @@ body
     width: clamp(121px,12.604166666666666vw,484px)
     background-color: transparent
     display: flex
-    margin-top: 64px
+    margin-top: clamp(32px,3.3333333333333335vw,128px)
     margin-right: 64px
     flex-direction: column
 
@@ -459,3 +469,758 @@ label:active:after
     height: 400px
     display: flex
     flex-direction: column
+
+@media screen and (max-width: 1600px) and (min-width: 1440px)
+
+    .header
+        width: 100% !important
+        margin-top: 85px !important
+        height: clamp(74.5px,7.760416666666667vw,298px)
+        background-color: #1D1D1D
+
+    .upper-header
+        width: 74.63541666666667%
+        height: clamp(54.5px,5.677083333333333vw,218px)
+        margin: auto
+        margin-top: clamp(7.5px,0.78125vw,30px)
+        margin-bottom: clamp(7.5px,0.78125vw,30px)
+        background-color: $darkForUpperHeader
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .icon-2
+        position: absolute !important
+        top: 52.5px !important
+        left: 538px !important
+        width: 21px !important
+        height: 21px !important
+        z-index: 10 !important
+        color: white
+
+    .logo
+        width: 220px !important
+        height: 220px !important
+        margin-left: 100px
+
+    .your-bots, .friends, .stats, .mode-switch
+        width: 100% !important
+        height: 35.47px !important
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 27px
+        display: flex
+        font-size: 16.5px !important
+        align-items: center
+        transition: 0.3s all
+
+    .notification-bubble
+        margin-left: 41px !important
+        font-size: 12px !important
+
+    label
+        margin-left: 32px !important
+        width: 44px !important
+        height: 16.81px !important
+        background: $mainSwitch
+
+    label:after
+        top: 0.8px !important
+        width: 10.94px !important
+        height: 10.94px !important
+
+    .create-bot
+        height: 35.47px !important
+
+    .your-bots
+        margin-top: 24px !important
+
+    .user-img
+        width: 24px !important
+        height: 24px !important
+
+    .user-text, .settings-text
+        font-size: 19.5px !important
+
+    .additional-buttons
+        font-size: 17px !important
+        margin-right: 16px !important
+
+    .chat-header
+        font-size: 19px !important
+        margin-left: clamp(8px,0.8333333333333334vw,32px)
+
+    .user-png
+        width: 36px !important
+        height: 36px !important
+
+    .message
+        margin-top: 7px !important
+
+@media screen and ( max-width:1440px ) and (min-width: 1366px)
+
+    .header
+        width: 100% !important
+        margin-top: 0px !important
+
+    .upper-header
+        width: 74.63541666666667%
+        height: clamp(54.5px,5.677083333333333vw,218px)
+        margin: auto
+        margin-top: clamp(7.5px,0.78125vw,30px)
+        margin-bottom: clamp(7.5px,0.78125vw,30px)
+        background-color: $darkForUpperHeader
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .icon-2
+        position: absolute !important
+        top: 42.5px !important
+        left: 485.5px !important
+        width: 18px !important
+        height: 18px !important
+        z-index: 10 !important
+        color: white
+
+    .logo
+        width: 210px !important
+        height: 210px !important
+
+    .your-bots, .friends, .stats, .mode-switch
+        width: 100% !important
+        height: 34.47px !important
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 27px
+        display: flex
+        font-size: 15.5px !important
+        align-items: center
+        transition: 0.3s all
+
+    .notification-bubble
+        margin-left: 31px !important
+        font-size: 12px !important
+
+    label
+        margin-left: 32px !important
+        width: 39px !important
+        height: 15.81px !important
+        background: $mainSwitch
+
+    label:after
+        top: 1px !important
+        width: 9.94px !important
+        height: 9.94px !important
+
+    .create-bot
+        height: 34.47px !important
+
+    .your-bots
+        margin-top: 24px !important
+
+    .user-img
+        width: 24px !important
+        height: 24px !important
+
+    .user-text, .settings-text
+        font-size: 18.5px !important
+
+    .additional-buttons
+        font-size: 16px !important
+        margin-right: 16px !important
+
+    .chat-header
+        font-size: 18.5px !important
+        margin-left: clamp(8px,0.8333333333333334vw,32px)
+
+    .user-png
+        width: 36px !important
+        height: 36px !important
+
+    .message
+        margin-top: 6px !important
+
+    .task
+        font-size: 15px !important
+
+    .header
+        width: 100% !important
+        margin-top: 85px !important
+        height: clamp(74.5px,7.760416666666667vw,298px)
+        background-color: #1D1D1D
+
+    .upper-header
+        width: 74.63541666666667%
+        height: clamp(54.5px,5.677083333333333vw,218px)
+        margin: auto
+        margin-top: clamp(7.5px,0.78125vw,30px)
+        margin-bottom: clamp(7.5px,0.78125vw,30px)
+        background-color: $darkForUpperHeader
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .icon-2
+        position: absolute !important
+        top: 92.5px !important
+        left: 490px !important
+        width: 18px !important
+        height: 18px !important
+        z-index: 10 !important
+        color: white
+
+    .logo
+        width: 220px !important
+        height: 220px !important
+        margin-left: 100px
+
+    .your-bots, .friends, .stats, .mode-switch
+        width: 100% !important
+        height: 35.47px !important
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 27px
+        display: flex
+        font-size: 15.5px !important
+        align-items: center
+        transition: 0.3s all
+
+    .notification-bubble
+        margin-left: 33px !important
+        font-size: 12px !important
+
+    label
+        margin-left: 24px !important
+        width: 44px !important
+        height: 16.81px !important
+        background: $mainSwitch
+
+    label:after
+        top: 1px !important
+        width: 10.94px !important
+        height: 10.94px !important
+
+    .create-bot
+        height: 35.47px !important
+
+    .your-bots
+        margin-top: 24px !important
+
+    .user-img
+        width: 24px !important
+        height: 24px !important
+
+    .user-text, .settings-text
+        font-size: 19.5px !important
+
+    .additional-buttons
+        font-size: 17px !important
+        margin-right: 16px !important
+
+    .chat-header
+        font-size: 19px !important
+        margin-left: clamp(8px,0.8333333333333334vw,32px)
+
+    .user-png
+        width: 36px !important
+        height: 36px !important
+
+    .message
+        margin-top: 7px !important
+
+@media screen and ( max-width:1366px ) and (min-width: 1280px)
+
+    .header
+        width: 100% !important
+        margin-top: 74px !important
+
+    .upper-header
+        width: 74.63541666666667%
+        height: clamp(54.5px,5.677083333333333vw,218px)
+        margin: auto
+        margin-top: clamp(7.5px,0.78125vw,30px)
+        margin-bottom: clamp(7.5px,0.78125vw,30px)
+        background-color: $darkForUpperHeader
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .icon-2
+        position: absolute !important
+        top: 42.5px !important
+        left: 465.5px !important
+        width: 16px !important
+        height: 16px !important
+        z-index: 10 !important
+        color: white
+
+    .logo
+        width: 185px !important
+        height: 185px !important
+
+    .your-bots, .friends, .stats, .mode-switch
+        width: 100% !important
+        height: 32.47px !important
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 27px
+        display: flex
+        font-size: 15px !important
+        align-items: center
+        transition: 0.3s all
+
+    .notification-bubble
+        margin-left: 25px !important
+        font-size: 11.4px !important
+
+    label
+        margin-left: 28px !important
+        width: 35px !important
+        height: 13.81px !important
+        background: $mainSwitch
+
+    label:after
+        top: 1px !important
+        width: 7.94px !important
+        height: 7.94px !important
+
+    .create-bot
+        height: 32.47px !important
+
+    .your-bots
+        margin-top: 24px !important
+
+    .user-img
+        width: 22px !important
+        height: 22px !important
+
+    .user-text, .settings-text
+        font-size: 15.5px !important
+
+    .user-photo, .gear
+        width: 22px !important
+        height: 22px !important
+
+    .additional-buttons
+        font-size: 15px !important
+        margin-right: 16px !important
+
+    .chat-header
+        font-size: 16.5px !important
+        margin-left: clamp(8px,0.8333333333333334vw,32px)
+
+    .user-png
+        width: 32px !important
+        height: 32px !important
+
+    .message
+        margin-top: 6px !important
+
+    .task
+        font-size: 13px !important
+
+    .user, .settings
+        width: 100px !important
+        height: 30px !important
+
+@media screen and ( max-width:1280px ) and (min-width: 1024px)
+    .header
+        width: 100% !important
+        margin-top: 1px !important
+
+    .upper-header
+        width: 74.63541666666667%
+        height: clamp(54.5px,5.677083333333333vw,218px)
+        margin: auto
+        margin-top: clamp(7.5px,0.78125vw,30px)
+        margin-bottom: clamp(7.5px,0.78125vw,30px)
+        background-color: $darkForUpperHeader
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .icon-2
+        position: absolute !important
+        top: 38.5px !important
+        left: 441.5px !important
+        width: 15px !important
+        height: 15px !important
+        z-index: 10 !important
+        color: white
+
+    .logo
+        width: 185px !important
+        height: 185px !important
+
+    .your-bots, .friends, .stats, .mode-switch
+        width: 100% !important
+        height: 32.47px !important
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 27px
+        display: flex
+        font-size: 14px !important
+        align-items: center
+        transition: 0.3s all
+
+    .notification-bubble
+        margin-left: 23px !important
+        font-size: 10.4px !important
+
+    label
+        margin-left: 20px !important
+        width: 34px !important
+        height: 13.81px !important
+        background: $mainSwitch
+
+    label:after
+        top: 1px !important
+        width: 7.94px !important
+        height: 7.94px !important
+
+    .create-bot
+        height: 32.47px !important
+
+    .your-bots
+        margin-top: 24px !important
+
+    .user-img
+        width: 22px !important
+        height: 22px !important
+
+    .user-text, .settings-text
+        font-size: 15.5px !important
+
+    .user-photo, .gear
+        width: 22px !important
+        height: 22px !important
+
+    .additional-buttons
+        font-size: 14.5px !important
+        margin-right: 16px !important
+
+    .chat-header
+        font-size: 15.5px !important
+        margin-left: clamp(8px,0.8333333333333334vw,32px)
+
+    .user-png
+        width: 30px !important
+        height: 30px !important
+
+    .message
+        margin-top: 6px !important
+
+    .task
+        font-size: 13px !important
+
+    .user, .settings
+        width: 100px !important
+        height: 30px !important
+
+@media screen and ( max-width:1024px) and (min-width: 768px)
+    .header
+        width: 100% !important
+        margin-top: 1px !important
+
+    .upper-header
+        width: 74.63541666666667%
+        height: clamp(54.5px,5.677083333333333vw,218px)
+        margin: auto
+        margin-top: clamp(7.5px,0.78125vw,30px)
+        margin-bottom: clamp(7.5px,0.78125vw,30px)
+        background-color: $darkForUpperHeader
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .icon-2
+        position: absolute !important
+        top: 32.5px !important
+        left: 339.5px !important
+        width: 13px !important
+        height: 13px !important
+        z-index: 10 !important
+        color: white
+
+    .logo
+        width: 135px !important
+        height: 135px !important
+
+    .your-bots, .friends, .stats, .mode-switch
+        width: 100% !important
+        height: 28.47px !important
+        background: #1E1E1E
+        border: 2px solid #373737
+        border-radius: 27px
+        display: flex
+        font-size: 12px !important
+        align-items: center
+        transition: 0.3s all
+
+    .menu
+        width: 155px !important
+
+    .notification-bubble
+        margin-left: 18px !important
+        font-size: 9.4px !important
+
+    label
+        margin-left: 20px !important
+        width: 32px !important
+        height: 11.81px !important
+        background: $mainSwitch
+
+    label:after
+        top: 1px !important
+        width: 5.94px !important
+        height: 5.94px !important
+
+    .create-bot
+        height: 28.47px !important
+        font-size: 15px !important
+
+    .your-bots
+        margin-top: 24px !important
+
+    .user-img
+        width: 18px !important
+        height: 18px !important
+
+    .user-text, .settings-text
+        font-size: 14.5px !important
+
+    .separator-u
+        height: 12px !important
+
+    .user-photo, .gear
+        width: 20px !important
+        height: 20px !important
+
+    .additional-buttons
+        font-size: 11.5px !important
+        margin-right: 16px !important
+
+    .chat-header
+        font-size: 12.5px !important
+        margin-left: clamp(8px,0.8333333333333334vw,32px)
+
+    .user-png
+        width: 23px !important
+        height: 23px !important
+
+    .message
+        margin-top: 4px !important
+
+    .task
+        font-size: 10px !important
+
+    .user, .settings
+        width: 90px !important
+        height: 28px !important
+
+// @media screen and ( max-width:768px) and (min-width: 480px)
+
+#dark body
+    background: $darkBG
+
+#light body
+    background: $lightBG
+
+#dark .your-stats-p
+    color: $forTextMenu
+
+#light .your-stats-p
+    color: #121212
+
+#dark .switch-mode-p
+    color: rgba(255, 255, 255, 0.55)
+
+#light .switch-mode-p
+    color: #121212
+
+#dark .stats
+    color: $blueForDark
+
+#light .stats
+    color: $mainBlueLight
+
+#dark .your-friends-p
+    color: $forTextMenu
+
+#light .your-friends-p
+    color: #121212
+
+#dark .friends
+    color: $blueForDark
+
+#light .friends
+    color: $mainBlueLight
+
+#dark .notification-bubble
+    background-color: $forNotification
+    color: rgb(255, 255, 255, 0.7)
+
+#light .notification-bubble
+    background-color: $forNotification
+    color: $white
+
+#dark .your-bots-p
+    color: $forTextMenu
+
+#light .your-bots-p
+    color: #121212
+
+#dark .your-bots
+    color: $blueForDark
+
+#light .your-bots
+    color: $mainBlueLight
+
+#dark .your-bots, #dark .friends, #dark .stats, #dark .mode-switch
+    background: #1E1E1E
+    border: 2px solid #373737
+
+#light .your-bots, #light .friends, #light .stats, #light .mode-switch
+    background-color: #F2FCFF
+    border: 2px solid $mainBlueLight
+
+#dark .condition
+    color: rgba(255, 255, 255, 0.6)
+
+#light .condition
+    color: #121212
+
+#dark .separator-u
+    background-color: #fff
+
+#light .separator-u
+    background-color: #121212
+
+#dark .username
+    color: $blueForDark
+
+#light .username
+    color: $mainBlueLight
+
+#dark .user-profile-tab
+    border: 1px solid #75DDFE
+
+#light .user-profile-tab
+    border: 1px solid $mainBlueLight
+
+#dark .user-img
+    border: 1px solid #75DDFE
+
+#light .user-img
+    border: 1px solid $mainBlueLight
+
+#dark .user-profile-tab
+    background: #1E1E1E
+    border: 2px solid #373737
+
+#light .user-profile-tab
+    background-color: #F2FCFF
+    border: 2px solid $lightBlueBorder
+
+#dark .user-photo
+    border: 1px solid $blueForDark
+
+#light .user-photo
+    border: 1px solid $mainBlueLight
+
+#dark .user
+    color: $blueForDark
+
+#dark .settings
+    color: $blueForDark
+
+#light .user
+    color: #121212
+
+#light .settings
+    color: #121212
+
+#dark .search-bar-after
+    border: 2px solid #373737
+    background-color: $darkForSearch
+    color: white
+
+#light .search-bar-after
+    color: #999999
+    border: 2px solid rgb(153, 153, 153, 0.2)
+    background-color: $searchBar
+
+#dark .search-bar
+    color: white
+    border: 2px solid #373737
+    background-color: $darkForSearch
+
+#light .search-bar
+    color: #999999
+    border: 2px solid rgb(153, 153, 153, 0.2)
+    background-color: $searchBar
+
+#dark .upper-header
+    background-color: $darkForUpperHeader
+
+#light .upper-header
+    background-color: $upperLight
+
+#dark .header
+    background-color: #1D1D1D
+
+#light .header
+    background-color: white
+
+#dark .task
+    color: $blueForDark
+
+#light .task
+    color: $mainBlueLight
+
+#dark .user-name
+    color: white
+
+#light .user-name
+    color: black
+
+#dark .messanger-box
+    border-bottom: 2px solid $darkForBorder
+
+#light .messanger-box
+    border-bottom: 2px solid $borderLight
+
+#dark .additional-buttons
+    color: rgb(135, 226, 253, 0.9)
+
+#light .additional-buttons
+    color: $mainBlueLight
+
+#dark .upper-container
+    color: $blueForDark
+    border-bottom: 2px solid $darkForBorder
+
+#light .upper-header
+    color: $forLightText
+    border-bottom: 2px solid $borderLight
+
+#dark .upper-container
+    color: $blueForDark
+    border-bottom: 2px solid $darkForBorder
+
+#light .upper-header
+    color: $forLightText
+    border-bottom: 2px solid $borderLight
+
+#dark .create-bot
+    background: $gradient
+
+#light .create-bot
+    background: $gradient
+
+#dark .separator
+    background-color: white
+
+#light .separator
+    background-color: black
